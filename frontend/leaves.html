@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leave Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <header style="background:#007bff;color:white;padding:10px;text-align:center;">
+    <button onclick="window.location.href='employees.html'" style="margin-right:10px;">Employees</button>
+    <button onclick="window.location.href='leaves.html'">Leaves</button>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Create Leave Request</h2>
+      <form id="leaveForm">
+        <label>Employee ID:</label>
+        <input type="text" id="leaveEmpId" required>
+        <label>Start Date:</label>
+        <input type="date" id="leaveStart" required>
+        <label>End Date:</label>
+        <input type="date" id="leaveEnd" required>
+        <label>Reason:</label>
+        <input type="text" id="leaveReason" required>
+        <button type="submit">Create Leave</button>
+      </form>
+    </aside>
+
+    <main class="content">
+      <h2>Leave Requests</h2>
+      <button id="loadLeaves">Load Leave Requests</button>
+      <table id="leaveTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Employee ID</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Reason</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

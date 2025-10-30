@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header style="background:#007bff;color:white;padding:10px;text-align:center;">
+    <button onclick="window.location.href='employees.html'" style="margin-right:10px;">Employees</button>
+    <button onclick="window.location.href='leaves.html'">Leaves</button>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Add Employee</h2>
+      <form id="employeeForm">
+        <label>Name:</label>
+        <input type="text" id="empName" required>
+        <label>Department:</label>
+        <input type="text" id="empDept" required>
+        <label>Leave Balance:</label>
+        <input type="number" id="empLeave" min="0" required>
+        <button type="submit">Add Employee</button>
+      </form>
+    </aside>
+
+    <main class="content">
+      <h2>Employee List</h2>
+      <button id="loadEmployees">Load Employees</button>
+      <table id="employeeTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Leave Balance</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
