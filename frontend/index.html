@@ -6,20 +6,40 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <header style="background:#007bff;color:white;padding:10px;text-align:center;">
-    <button onclick="window.location.href='employees.html'" style="margin-right:10px;">Employees</button>
+  <header style="background:#007bff;color:white;padding:10px;text-align:center;">
+    <button onclick="window.location.href='index.html'" style="margin-right:10px;">Employees</button>
     <button onclick="window.location.href='leaves.html'">Leaves</button>
   </header>
+
   <div class="container">
     <aside class="sidebar">
       <h2>Add Employee</h2>
       <form id="employeeForm">
-        <label>Name:</label>
-        <input type="text" id="empName" required>
-        <label>Department:</label>
-        <input type="text" id="empDept" required>
-        <label>Leave Balance:</label>
-        <input type="number" id="empLeave" min="0" required>
+        <label for="empName">Name:</label>
+        <input 
+          type="text" 
+          id="empName" 
+          placeholder="Enter employee name (e.g. Nguyen Van A)" 
+          required
+        >
+
+        <label for="empDept">Department:</label>
+        <input 
+          type="text" 
+          id="empDept" 
+          placeholder="Enter department (e.g. Human Resources)" 
+          required
+        >
+
+        <label for="empLeave">Leave Balance:</label>
+        <input 
+          type="number" 
+          id="empLeave" 
+          min="1" 
+          placeholder="Enter remaining leave days (e.g. 12)" 
+          required
+        >
+
         <button type="submit">Add Employee</button>
       </form>
     </aside>
@@ -41,6 +61,6 @@
     </main>
   </div>
 
-  <script src="script.js"></script>
+  <script src="./js/employees.js"></script>
 </body>
 </html>

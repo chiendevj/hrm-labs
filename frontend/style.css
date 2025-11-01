@@ -1,25 +1,90 @@
-body {
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(90deg, #007bff, #0062cc);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header button {
+  background: white;
+  color: #007bff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+header button:hover {
+  background: #0056b3;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
 .container {
   display: flex;
-  min-height: 100vh;
+  min-height: calc(100vh - 60px);
 }
 
 .sidebar {
-  width: 300px;
+  width: 400px;
+  background: #ffffff;
   padding: 20px;
-  background: #fff;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.content {
-  flex: 1;
-  padding: 20px;
+button {
+  background: linear-gradient(90deg, #4facfe, #007bff); 
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #007bff, #4facfe);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 123, 255, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.2);
+}
+
+
+.sidebar h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #007bff;
 }
 
 form {
@@ -28,58 +93,94 @@ form {
 }
 
 label {
-  margin: 8px 0 4px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
 }
 
-input[type="text"], input[type="number"], input[type="date"] {
-  padding: 8px;
-  border-radius: 4px;
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  padding: 10px 12px;
   border: 1px solid #ccc;
-  margin-bottom: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
 }
 
-button {
-  padding: 10px;
-  border: none;
-  background: #007bff;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,123,255,0.2);
 }
 
-button:hover { background: #0056b3; }
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.content h2 {
+  font-size: 1.4rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
-  background: #fff;
-  border-radius: 6px;
+  background: white;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-top: 20px;
 }
 
 th, td {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+  padding: 14px 12px;
   text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
 }
 
-th { background: #007bff; color: #fff; }
-
-td.status-pending { color: orange; font-weight: bold; }
-td.status-approved { color: green; font-weight: bold; }
-header button {
-  background: white;
-  color: #007bff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-header button:hover {
-  background: #0056b3;
+th {
+  background: #007bff;
   color: white;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+tr:hover td {
+  background: #f8faff;
+}
+
+td.status-pending {
+  color: #ff9800;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+td.status-approved {
+  color: #28a745;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .content {
+    padding: 20px;
+  }
 }

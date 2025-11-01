@@ -6,12 +6,10 @@ class LeaveService {
         const emp = EmployeeService.getById(employeeId);
         if (!emp) throw new Error('Employee not found');
         if (emp.leaveBalance <= 0) throw new Error('Insufficient leave balance');
-
         EmployeeService.reduceLeaveBalance(employeeId, 1);
-
         const leave = {
             id: uuidv4(),
-            employeeId,
+            employeeName: emp.name,
             startDate,
             endDate,
             reason,

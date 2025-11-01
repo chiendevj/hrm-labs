@@ -8,7 +8,7 @@ const LeaveService = require('../services/leaveRequestService');
 
 /**
  * @swagger
- * /leave:
+ * /leaves:
  *   get:
  *     summary: Get all leave requests
  *     tags: [Leave Requests]
@@ -27,7 +27,7 @@ exports.getAllLeaves = (req, res) => {
 
 /**
  * @swagger
- * /leave:
+ * /leaves:
  *   post:
  *     summary: Create a new leave request
  *     tags: [Leave Requests]
@@ -68,7 +68,7 @@ exports.createLeave = (req, res) => {
 
 /**
  * @swagger
- * /leave/{id}/approve:
+ * /leaves/{id}/approve:
  *   patch:
  *     summary: Approve a leave request
  *     tags: [Leave Requests]
