@@ -142,11 +142,11 @@ PATCH /leave/1/approve
 
 #### Employee List
 
-![Employee List Screenshot](https://github.com/chiendevj/hrm-labs/frontend/assets/employees.png)
+![Employee List Screenshot](https://github.com/chiendevj/hrm-labs/blob/master/frontend/assets/employees.png)
 
 #### 🌴 Leave Requests
 
-![Leave Requests Screenshot](https://github.com/chiendevj/hrm-labs/frontend/assets/leaves.png)
+![Leave Requests Screenshot](https://github.com/chiendevj/hrm-labs/blob/master/frontend/assets/leaves.png)
 
 ---
 
